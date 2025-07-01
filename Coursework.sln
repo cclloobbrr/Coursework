@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.35806.103 d17.14
+VisualStudioVersion = 17.14.35806.103
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coursework", "Coursework\Coursework.csproj", "{D421E34C-4843-4ACA-B614-186BE42407CD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseworkLibrary", "CourseworkLibrary\CourseworkLibrary.csproj", "{B087412C-F0E6-4105-AA83-275EA8EB28E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice", "Practice\Practice.csproj", "{147995A6-7075-4757-A6FA-C2233EFC3270}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{B087412C-F0E6-4105-AA83-275EA8EB28E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B087412C-F0E6-4105-AA83-275EA8EB28E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B087412C-F0E6-4105-AA83-275EA8EB28E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{147995A6-7075-4757-A6FA-C2233EFC3270}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{147995A6-7075-4757-A6FA-C2233EFC3270}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{147995A6-7075-4757-A6FA-C2233EFC3270}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{147995A6-7075-4757-A6FA-C2233EFC3270}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
