@@ -1,4 +1,4 @@
-﻿using ClassLibrary;
+﻿using CourseworkLibrary;
 
 public class Coursework
 {
@@ -18,15 +18,15 @@ public class Coursework
                 Console.WriteLine("Введите nx:");
                 nx = Convert.ToInt32(Console.ReadLine());
                 StartWrite.Write(nx);
-                
+
                 Console.WriteLine("Введите ny:");
                 ny = Convert.ToInt32(Console.ReadLine());
                 StartWrite.Write(nx, ny);
-                
+
                 Console.WriteLine("Введите nz:");
                 nz = Convert.ToInt32(Console.ReadLine());
                 StartWrite.Write(nx, ny, nz);
-                
+
                 Console.WriteLine("Введите lx:");
                 lx = Convert.ToDouble(Console.ReadLine());
                 StartWrite.Write(nx, ny, nz, lx);
@@ -34,15 +34,15 @@ public class Coursework
                 Console.WriteLine("Введите ly:");
                 ly = Convert.ToDouble(Console.ReadLine());
                 StartWrite.Write(nx, ny, nz, lx, ly);
-                
+
                 Console.WriteLine("Введите lz:");
                 lz = Convert.ToDouble(Console.ReadLine());
                 StartWrite.Write(nx, ny, nz, lx, ly, lz);
-                
+
                 Console.WriteLine("Введите tMax:");
                 tMax = Convert.ToDouble(Console.ReadLine());
                 StartWrite.Write(nx, ny, nz, lx, ly, lz, tMax);
-                
+
                 Console.WriteLine("Введите dt:");
                 dt = Convert.ToDouble(Console.ReadLine());
                 StartWrite.Write(nx, ny, nz, lx, ly, lz, tMax, dt);
@@ -119,7 +119,7 @@ public class Coursework
                     Console.Clear();
                     Console.WriteLine("\n1) Выбрать срез\n2) Выйти");
                     int wCheck = Convert.ToInt16(Console.ReadLine());
-                    if(wCheck == 1)
+                    if (wCheck == 1)
                     {
                         Results.PrintSlise(solution);
                     }
