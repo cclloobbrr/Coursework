@@ -65,8 +65,8 @@ public class Coursework
                 lx = 1.0;
                 ly = 1.0;
                 lz = 1.0;
-                tMax = 0.1;
-                dt = 0.001;
+                tMax = 1000;
+                dt = 0.01;
                 alpha = 0.1;
                 initialCondition = (x, y, z) => 0.0;
 
@@ -77,11 +77,11 @@ public class Coursework
         // Граничные условия (Дирихле, Неймана и Робин)
         var boundaryConditions = new Dictionary<string, (int type, double value)>
         {
-            { "x0", (0, 15.0) },       // Дирихле: u(0, y, z, t) = 20
+            { "x0", (1, 0.0) },       // Дирихле: u(0, y, z, t) = 20
             { "x1", (1, 0.0) },        // Неймана: du/dx(lx, y, z, t) = 0
-            { "y0", (0, 30.0) },       // Дирихле: u(x, 0, z, t) = 30
+            { "y0", (1, 0.0) },       // Дирихле: u(x, 0, z, t) = 30
             { "y1", (1, 0.0) },        // Неймана: du/dy(x, ly, z, t) = 0
-            { "z0", (0, 60.0) },       // Дирихле: u(x, y, 0, t) = 40
+            { "z0", (1, 0.0) },       // Дирихле: u(x, y, 0, t) = 40
             { "z1", (1, 0.0) }         // Неймана: du/dz(x, y, lz, t) = 0
         };
 
@@ -121,7 +121,7 @@ public class Coursework
                     int wCheck = Convert.ToInt16(Console.ReadLine());
                     if (wCheck == 1)
                     {
-                        Results.PrintSlise(solution);
+                        Results.PrintSlice(solution);
                     }
                     else
                     {
