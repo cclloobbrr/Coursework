@@ -11,7 +11,7 @@ public class Practice
         double lx = 1.0, ly = 1.0, lz = 1.0;
 
         // Параметры времени
-        double tMax = 0.010, dt = 0.001;
+        double tMax = 0.1, dt = 0.001;
 
         // Коэффициенты диффузии
         double algaeDiffusion = 0.1;  // для водорослей
@@ -50,9 +50,27 @@ public class Practice
         {
         };
 
+        double[,,] algaeSolution;
+        double[,,] shrimpsSolution;
+        //algaeSolution = Solve.SolveGeneral(nx, ny, nz, lx, ly, lz, tMax, dt, algaeDiffusion, initialAlgae, algaeBoundaryConditions, robinCoefficients);
+        //shrimpsSolution = Solve.SolveGeneral(nx, ny, nz, lx, ly, lz, tMax, dt, shrimpDiffusion, initialShrimps, shrimpsBoundaryConditions, robinCoefficients);
 
-        double[,,] algaeSolution = Solve.SolveGeneral(nx, ny, nz, lx, ly, lz, tMax, dt, algaeDiffusion, initialAlgae, algaeBoundaryConditions, robinCoefficients);
-        double[,,] shrimpsSolution = Solve.SolveGeneral(nx, ny, nz, lx, ly, lz, tMax, dt, shrimpDiffusion, initialShrimps, shrimpsBoundaryConditions, robinCoefficients);
+        (algaeSolution, shrimpsSolution) = Solve_2.SolveGeneral(
+            nx,
+            ny,
+            nz,
+            lx,
+            ly,
+            lz,
+            tMax,
+            dt,
+            algaeDiffusion,
+            shrimpDiffusion,
+            initialAlgae,
+            initialShrimps,
+            algaeBoundaryConditions,
+            shrimpsBoundaryConditions,
+            robinCoefficients);
 
 
         Console.WriteLine("\nВыберите способ вывода результатов:\n1) Вывод в .txt файл\n2) Визуализировать в консоли водоросли\n2) Визуализировать в консоли креветки");
