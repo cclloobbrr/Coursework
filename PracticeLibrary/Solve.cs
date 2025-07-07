@@ -2,8 +2,6 @@
 
 namespace PracticeLibrary
 {
-    public delegate double HeatSourceFunction(double x, double y, double z, double t);
-
     public class Solve
     {
         public static double[,,] SolveGeneral(int nx, int ny, int nz, double lx, double ly, double lz, double tMax, double dt, double alpha, Func<double, double, double, double> initialCondition, Dictionary<string, (int type, double value)> boundaryConditions, Dictionary<string, (double alpha, double beta)> robinCoefficients)
