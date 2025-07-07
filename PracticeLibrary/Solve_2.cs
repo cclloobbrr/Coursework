@@ -39,9 +39,9 @@ namespace PracticeLibrary
             double dy = ly / (ny - 1);
             double dz = lz / (nz - 1);
 
-            double aglae_rx = algaeDiffusion * dt / (2.0 * dx * dx);
-            double aglae_ry = algaeDiffusion * dt / (2.0 * dy * dy);
-            double aglae_rz = algaeDiffusion * dt / (2.0 * dz * dz);
+            double rx_aglae = algaeDiffusion * dt / (2.0 * dx * dx);
+            double ry_aglae = algaeDiffusion * dt / (2.0 * dy * dy);
+            double rz_aglae = algaeDiffusion * dt / (2.0 * dz * dz);
 
             // Для креветок
             double rx_shrimp = shrimpDiffusion * dt / (2.0 * dx * dx);
@@ -75,13 +75,13 @@ namespace PracticeLibrary
 
             for (double t = 0; t < tMax; t += dt)
             {
-                SolveX(algaeSolution, algaeDiffusion, dt, aglae_rx, nx, ny, nz, dx, dy, dz,
+                SolveX(algaeSolution, algaeDiffusion, dt, rx_aglae, nx, ny, nz, dx, dy, dz,
                     algaeBoundaryConditions, robinCoefficients, t, shrimpsSolution,
                     (a, s) => a * algaeGrowthRate * (1 - a) - interactionRate * a * s);
-                SolveY(algaeSolution, algaeDiffusion, dt, aglae_ry, nx, ny, nz, dx, dy, dz,
+                SolveY(algaeSolution, algaeDiffusion, dt, ry_aglae, nx, ny, nz, dx, dy, dz,
                     algaeBoundaryConditions, robinCoefficients, t, shrimpsSolution,
                     (a, s) => a * algaeGrowthRate * (1 - a) - interactionRate * a * s);
-                SolveZ(algaeSolution, algaeDiffusion, dt, aglae_rz, nx, ny, nz, dx, dy, dz,
+                SolveZ(algaeSolution, algaeDiffusion, dt, rz_aglae, nx, ny, nz, dx, dy, dz,
                     algaeBoundaryConditions, robinCoefficients, t, shrimpsSolution,
                     (a, s) => a * algaeGrowthRate * (1 - a) - interactionRate * a * s);
 

@@ -7,7 +7,7 @@ public class Practice
         Console.WriteLine("Добро пожаловать");
 
         // Параметры сетки
-        int nx = 10, ny = 10, nz = 10;
+        int nx = Config.nx, ny = Config.ny, nz = Config.nz;
         double lx = 1.0, ly = 1.0, lz = 1.0;
 
         // Параметры времени
